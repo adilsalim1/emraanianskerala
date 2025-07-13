@@ -16,10 +16,41 @@
       font-family: 'Poppins', sans-serif;
       background-color: #0d0d0d;
       color: #f2f2f2;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      background-color: #111;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #222;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #ffd700;
+    }
+
+    .nav-links a {
+      margin-left: 2rem;
+      color: #f2f2f2;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #ffd700;
     }
 
     header {
-      background: url('https://wallpapers.com/images/high/emraan-hashmi-broken-window-fr2n9wxhtsev4sqn.webp') center center / cover no-repeat;
+      background: url('https://i.imgur.com/7qU6VPM.jpg') center center / cover no-repeat;
       height: 90vh;
       display: flex;
       align-items: center;
@@ -27,96 +58,114 @@
       text-align: center;
     }
 
-    header .overlay {
-      background: rgba(0, 0, 0, 0.7);
+    .header-content {
+      background-color: rgba(0, 0, 0, 0.7);
       padding: 2rem;
-      border-radius: 12px;
+      border-radius: 10px;
     }
 
-    header h1 {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
-    }
-
-    header p {
-      font-size: 1.2rem;
-    }
-
-    nav {
-      background-color: #1a1a1a;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    nav a {
-      color: #f2f2f2;
-      text-decoration: none;
-      margin: 0 1.2rem;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
+    .header-content h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
       color: #ffd700;
+    }
+
+    .header-content p {
+      font-size: 1.2rem;
+      color: #ccc;
     }
 
     section {
       padding: 4rem 2rem;
-      max-width: 900px;
-      margin: 0 auto;
+      max-width: 1000px;
+      margin: auto;
     }
 
     section h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
       border-left: 4px solid #ffd700;
-      padding-left: 0.5rem;
+      padding-left: 0.6rem;
+      color: #ffd700;
     }
 
     section p {
-      font-size: 1rem;
       line-height: 1.8;
-      color: #cccccc;
+      color: #ccc;
     }
 
     footer {
-      background-color: #1a1a1a;
+      background-color: #111;
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
       color: #aaa;
     }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links a {
+        margin: 0.5rem 0;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .header-content h1 {
+        font-size: 2rem;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="overlay">
+  <nav>
+    <div class="logo">HashmiFans Kerala</div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header id="home">
+    <div class="header-content">
       <h1>Emraan Hashmi Fans Kerala</h1>
-      <p>A tribute to the legacy of an iconic performer</p>
+      <p>Uniting the fans of Emraan Hashmi across Kerala</p>
     </div>
   </header>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Filmography</a>
-    <a href="#">Gallery</a>
-    <a href="#">Contact</a>
-  </nav>
-
-  <section>
+  <section id="about">
     <h2>About</h2>
-    <p>Emraan Hashmi Fans Kerala is a passionate community dedicated to celebrating the work and journey of one of Bollywood’s most versatile actors. From his breakout roles to critically acclaimed performances, we bring fans together from across Kerala to stay connected, informed, and inspired.</p>
+    <p>Emraan Hashmi Fans Kerala is a community-driven initiative to connect and celebrate the works of Emraan Hashmi, one of Bollywood’s most versatile and consistent performers. We aim to bring fans together, share curated updates, and organize events and collaborations across the state.</p>
   </section>
 
-  <section>
-    <h2>Mission</h2>
-    <p>To create a professional and respectful space for fans to engage, appreciate cinematic art, and promote the talent of Emraan Hashmi across Kerala. We aim to organize fan interactions, share curated content, and maintain a positive image of our community.</p>
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <p>Coming soon: A visual collection of exclusive Emraan Hashmi photos, event captures, posters, and fan-made artwork.</p>
+  </section>
+
+  <section id="news">
+    <h2>News</h2>
+    <p>Stay tuned for updates on upcoming movies, public appearances, interviews, and Kerala fan meetups!</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Want to collaborate, contribute, or join our fan base? Reach out to us at <strong>emraanfanskerala@gmail.com</strong> or follow our Instagram handle @emraanfanskerala.</p>
   </section>
 
   <footer>
-    © 2025 Emraan Hashmi Fans Kerala. All rights reserved.
+    © 2025 Emraan Hashmi Fans Kerala. All Rights Reserved.
   </footer>
 
 </body>
