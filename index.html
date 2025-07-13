@@ -50,29 +50,28 @@
     }
 
     header {
-      background: url('https://i.imgur.com/7qU6VPM.jpg') center center / cover no-repeat;
+      background: url('https://wallpapercave.com/wp/wp4110998.jpg') center center / cover no-repeat;
       height: 90vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
+      color: #fff;
     }
 
-    .header-content {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 2rem;
-      border-radius: 10px;
-    }
-
-    .header-content h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 700;
       color: #ffd700;
+      text-shadow: 2px 2px 4px #000;
     }
 
-    .header-content p {
+    .hero-subtitle {
       font-size: 1.2rem;
-      color: #ccc;
+      color: #eee;
+      margin-top: 0.5rem;
+      text-shadow: 1px 1px 3px #000;
     }
 
     section {
@@ -118,8 +117,14 @@
         align-items: flex-start;
       }
 
-      .header-content h1 {
-        font-size: 2rem;
+      .hero-title {
+        font-size: 2.2rem;
+        text-align: center;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+        text-align: center;
       }
     }
   </style>
@@ -138,10 +143,8 @@
   </nav>
 
   <header id="home">
-    <div class="header-content">
-      <h1>Emraan Hashmi Fans Kerala</h1>
-      <p>Uniting the fans of Emraan Hashmi across Kerala</p>
-    </div>
+    <h1 class="hero-title">Emraan Hashmi Fans Kerala</h1>
+    <p class="hero-subtitle">Uniting the fans of Emraan Hashmi across Kerala</p>
   </header>
 
   <section id="about">
