@@ -4,172 +4,176 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Emraan Hashmi Fans Kerala</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    /* Slider styles */
+    .slider {
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 2rem;
     }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #0d0d0d;
-      color: #f2f2f2;
-      scroll-behavior: smooth;
-    }
-
-    nav {
-      background-color: #111;
-      padding: 1rem 2rem;
+    .slides {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid #222;
+      width: 300%; /* Three images, each taking 100% of the slider width */
+      animation: slide 10s infinite; /* Adjust animation duration as needed */
+    }
+    .slides img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      display: block; /* Remove extra space below images */
+    }
+    @keyframes slide {
+      0% { margin-left: 0%; }
+      33% { margin-left: -100%; }
+      66% { margin-left: -200%; }
+      100% { margin-left: 0%; } /* Loop back to the first image */
     }
 
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #ffd700;
-    }
-
-    .nav-links a {
-      margin-left: 2rem;
-      color: #f2f2f2;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: #ffd700;
-    }
-
-    header {
-      background: url('https://wallpapercave.com/wp/wp4110998.jpg') center center / cover no-repeat;
-      height: 90vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #fff;
-    }
-
-    .hero-title {
-      font-size: 3.5rem;
-      font-weight: 700;
-      color: #ffd700;
-      text-shadow: 2px 2px 4px #000;
-    }
-
-    .hero-subtitle {
-      font-size: 1.2rem;
-      color: #eee;
-      margin-top: 0.5rem;
-      text-shadow: 1px 1px 3px #000;
-    }
-
+    /* General section styling */
     section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: auto;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      line-height: 1.6;
     }
 
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      border-left: 4px solid #ffd700;
-      padding-left: 0.6rem;
+    section h1 {
       color: #ffd700;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 2.5rem;
     }
 
     section p {
-      line-height: 1.8;
-      color: #ccc;
+      margin-bottom: 1rem;
+      text-align: justify;
     }
 
+    /* Biography specific styles */
+    .biography-section {
+      background-color: #1a1a1a;
+      padding: 2.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .biography-section h2 {
+      color: #ffd700;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .biography-section p {
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    /* Footer styles */
     footer {
       background-color: #111;
+      color: #f2f2f2;
       text-align: center;
-      padding: 1rem;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      border-top: 1px solid #222;
       font-size: 0.9rem;
-      color: #aaa;
     }
 
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #f2f2f2;
+      text-decoration: underline;
+    }
+
+    /* Responsive adjustments */
     @media (max-width: 768px) {
-      .nav-links {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+      .slides img {
+        height: 300px; /* Adjust height for smaller screens */
       }
-
-      .nav-links a {
-        margin: 0.5rem 0;
+      section h1 {
+        font-size: 2rem;
       }
-
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
+      .biography-section h2 {
+        font-size: 1.75rem;
       }
-
-      .hero-title {
-        font-size: 2.2rem;
-        text-align: center;
+      section {
+        padding: 1rem;
       }
+    }
 
-      .hero-subtitle {
-        font-size: 1rem;
-        text-align: center;
+    @media (max-width: 480px) {
+      .slides img {
+        height: 200px;
+      }
+      section h1 {
+        font-size: 1.75rem;
+      }
+      .biography-section h2 {
+        font-size: 1.5rem;
       }
     }
   </style>
 </head>
 <body>
+  
+<nav>
+  <div class="logo">Emraanians Kerala</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="filmography.html">Filmography</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="trends.html">Trends</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
 
-  <nav>
-    <div class="logo">Emraan Hashmi Fans Kerala</div>
-    <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
+  <div class="slider">
+    <div class="slides">
+      <img src="https://wallpapercave.com/wp/wp4110998.jpg" alt="Emraan Hashmi 1" onerror="this.onerror=null;this.src='https://placehold.co/1200x500/000000/FFFFFF?text=Image+Not+Found';">
+      <img src="https://wallpapercave.com/wp/wp4111000.jpg" alt="Emraan Hashmi 1" onerror="this.onerror=null;this.src='https://placehold.co/1200x500/000000/FFFFFF?text=Image+Not+Found';">
+      <img src="https://wallpapercave.com/wp/wp4110999.jpg" alt="Emraan Hashmi 1" onerror="this.onerror=null;this.src='https://placehold.co/1200x500/000000/FFFFFF?text=Image+Not+Found';">
+      <img src="https://wallpapercave.com/wp/wp4110943.jpg" alt="Emraan Hashmi 1" onerror="this.onerror=null;this.src='https://placehold.co/1200x500/000000/FFFFFF?text=Image+Not+Found';">
+      <img src="https://wallpapercave.com/wp/wp4110989.jpg" alt="Emraan Hashmi 2" onerror="this.onerror=null;this.src='https://placehold.co/1200x500/000000/FFFFFF?text=Image+Not+Found';">
+      <img src="https://wallpapercave.com/wp/wp4110985.jpg" alt="Emraan Hashmi 3" onerror="this.onerror=null;this.src='https://placehold.co/1200x500/000000/FFFFFF?text=Image+Not+Found';">
     </div>
-  </nav>
+  </div>
 
-  <header id="home">
-    <h1 class="hero-title">Emraan Hashmi Fans Kerala</h1>
-    <p class="hero-subtitle">Uniting the fans of Emraan Hashmi across Kerala</p>
-  </header>
-
-  <section id="about">
-    <h2>About</h2>
-    <p>Emraan Hashmi Fans Kerala is a community-driven initiative to connect and celebrate the works of Emraan Hashmi, one of Bollywood’s most versatile and consistent performers. We aim to bring fans together, share curated updates, and organize events and collaborations across the state.</p>
+  <section>
+    <h1>Welcome to Emraan Hashmi Fans Kerala</h1>
+    <p>This is the official fan site dedicated to Emraan Hashmi fans across Kerala. Explore his works, awards, and more. We aim to be the most comprehensive resource for Emraan Hashmi's career, providing detailed information about his films, achievements, and latest news.</p>
+    <p>Join us in celebrating the journey of one of Bollywood's most versatile actors. Your ultimate destination for all things Emraan Hashmi!</p>
   </section>
 
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <p>Coming soon: A visual collection of exclusive Emraan Hashmi photos, event captures, posters, and fan-made artwork.</p>
+  <section class="biography-section">
+    <h2>Biography: The Journey of Emraan Hashmi</h2>
+    <p>Emraan Hashmi, born on March 24, 1979, is an acclaimed Indian actor who primarily works in Hindi cinema. Known for his unconventional film choices and intense performances, he has established himself as a prominent figure in the industry. Hashmi's career began as an assistant director for the 2002 horror film 'Raaz' before making his acting debut with the 2003 crime thriller 'Footpath'.</p>
+
+    <p>His breakthrough came with the 2004 erotic thriller 'Murder', which was a major commercial success. This was followed by a series of successful films, often featuring him in complex and morally ambiguous roles, earning him the moniker "Serial Kisser" early in his career. However, he soon diversified his roles, proving his acting prowess in various genres.</p>
+
+    <h3>Early Life and Background</h3>
+    <p>Emraan Hashmi was born in Mumbai, Maharashtra, to Anwar Hashmi and Mahira Hashmi. His father was a businessman, and his mother was a homemaker. He is the nephew of filmmaker Mahesh Bhatt and producer Mukesh Bhatt, and the cousin of actresses Pooja Bhatt and Alia Bhatt, and director Mohit Suri. He completed his schooling at Jamnabai Narsee School and pursued a Bachelor of Commerce from Sydenham College, Mumbai.</p>
+
+    <h3>Career Highlights and Evolution</h3>
+    <p>Hashmi's career trajectory is marked by a steady evolution from a romantic thriller hero to a versatile actor capable of portraying diverse characters. Some of his critically acclaimed and commercially successful films include 'Gangster' (2006), 'Jannat' (2008), 'Raaz 2' (2009), 'Once Upon a Time in Mumbaai' (2010), 'The Dirty Picture' (2011), 'Shanghai' (2012), and 'Ek Thi Daayan' (2013).</p>
+    <p>He has often collaborated with directors like Mohit Suri and Mahesh Bhatt, delivering memorable performances in films known for their strong narratives and popular music. In recent years, he has continued to challenge himself with roles in films like 'Baadshaho' (2017), 'Why Cheat India' (2019), and 'Mumbai Saga' (2021), and 'Tiger 3' (2023) where he played the antagonist, showcasing his range.</p>
+
+    <h3>Personal Life</h3>
+    <p>Emraan Hashmi is married to Parveen Shahani, and they have a son named Ayaan Hashmi. He is known for being a private person and maintaining a low profile outside of his professional commitments. He is also an advocate for cancer awareness, having shared his son's battle with the disease.</p>
+
+    <p>This section provides a brief overview of Emraan Hashmi's life and career. For a detailed list of his films, please visit the Filmography section.</p>
   </section>
 
-  <section id="news">
-    <h2>News</h2>
-    <p>Stay tuned for updates on upcoming movies, public appearances, interviews, and Kerala fan meetups!</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Want to collaborate, contribute, or join our fan base? Reach out to us at <strong>emraanfanskerala@gmail.com</strong> or follow our Instagram handle @emraanfanskerala.</p>
-  </section>
-
-  <footer>
-    © 2025 Emraan Hashmi Fans Kerala. All Rights Reserved.
-  </footer>
+ <footer>
+    <p>&copy; 2025 Emraanians Kerala. Developed by <a href="https://x.com/adil_emmi" target="_blank">Adil Salim</a>.</p>
+</footer>
 
 </body>
 </html>

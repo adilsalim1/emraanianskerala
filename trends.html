@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trends - Emraan Hashmi</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Trends section specific styles */
+    .trends-section {
+      padding: 2rem;
+      max-width: 900px; /* Increased max-width for more content */
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .trends-section h1 {
+      color: #ffd700;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+    }
+
+    .trend-card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .trend-card {
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .trend-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .trend-card h2 {
+      color: #f2f2f2;
+      font-size: 1.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .trend-card p {
+      font-size: 0.95rem;
+      color: #ccc;
+      margin-bottom: 1rem;
+    }
+
+    .trend-card a {
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-block;
+      margin-top: 0.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .trend-card a:hover {
+      color: #f2f2f2;
+      text-decoration: underline;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .trends-section h1 {
+        font-size: 2rem;
+      }
+      .trends-section {
+        padding: 1rem;
+      }
+      .trend-card-container {
+        grid-template-columns: 1fr; /* Stack cards on smaller screens */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .trends-section h1 {
+        font-size: 1.75rem;
+      }
+      .trend-card {
+        padding: 1rem;
+      }
+      .trend-card h2 {
+        font-size: 1.3rem;
+      }
+      .trend-card p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+<nav>
+  <div class="logo">Emraanians Kerala</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="filmography.html">Filmography</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="trends.html">Trends</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+  <section class="trends-section">
+    <h1>Latest Trends & News</h1>
+    <p>Stay updated with the latest happenings, news, and trending discussions related to Emraan Hashmi.</p>
+    
+    <div class="trend-card-container" id="trend-cards-container">
+      <!-- Trend cards will be dynamically inserted here by JavaScript -->
+    </div>
+  </section>
+
+  <script>
+    // Array of trend data
+    const trendsData = [
+      {
+        title: "Awarapan 2 Buzz",
+        description: "Emraan Hashmi's new profile picture has sparked massive speculation among fans, hinting at his look for the much-anticipated sequel, Awarapan 2. The film is officially in the works and slated for a 2026 release.",
+        link: "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/emraan-hashmi-sparks-buzz-with-mysterious-new-profile-photo-fans-say-it-is-awarapan-2-look/articleshow/122421801.cms"
+      },
+      {
+        title: "Gunmaaster G9 Reunion",
+        description: "Emraan Hashmi and Himesh Reshammiya are reuniting for the action-packed film 'Gunmaaster G9', taking fans back to their iconic musical-action combo from the 2000s. The film is set to release in 2026.",
+        link: "https://www.thehindu.com/entertainment/movies/emraan-hashmi-himesh-reshammiya-reunite-for-gunmaaster-g9-take-fans-back-to-the-2000s/article69792446.ece"
+      },
+      {
+        title: "Tiger 3 Performance Praise",
+        description: "Emraan Hashmi's portrayal of the antagonist Aatish Rehman in 'Tiger 3' has received significant praise from audiences and critics alike, with many calling it a standout performance.",
+        link: "https://www.freepressjournal.in/entertainment/tiger-3-twitter-review-fans-declare-salman-katrina-film-as-watchable-reserve-special-praise-for-emraan-hashmi"
+      },
+      {
+        title: "Ground Zero Discussions",
+        description: "Discussions around Emraan Hashmi's film 'Ground Zero' continue, with netizens reacting to his portrayal of a BSF officer in this action-thriller inspired by real events.",
+        link: "https://www.filmibeat.com/bollywood/news/2025/ground-zero-twitter-review-netizens-react-to-emraan-hashmi-s-action-thriller-check-tweets-456839.html"
+      },
+      {
+        title: "OG Wraps Shoot",
+        description: "Pawan Kalyan and Emraan Hashmi's 'OG' has officially wrapped its shoot, with a new poster unveiled and a grand worldwide theatrical release set for September 25, 2025.",
+        link: "https://www.telugutimes.net/en/cinemas/cinema-news/og-wraps-shoot-grand-release-on-25th-september-2025-321850.html"
+      },
+      {
+        title: "Mohit Suri on Emraan's Comeback",
+        description: "Director Mohit Suri believes Emraan Hashmi is 'just one hit away' from reclaiming his top spot, expressing confidence in films like 'Awarapan 2' to reignite his career.",
+        link: "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/emraan-hashmi-is-just-one-hit-away-and-awarapan-2-should-do-it-for-him-mohit-suris-take-on-the-actors-career/articleshow/122337207.cms"
+      }
+      // Add more trend objects here as new information becomes available
+    ];
+
+    // Function to create and append trend cards
+    function renderTrends() {
+      const container = document.getElementById('trend-cards-container');
+      container.innerHTML = ''; // Clear existing content
+
+      trendsData.forEach(trend => {
+        const trendCard = document.createElement('div');
+        trendCard.classList.add('trend-card');
+
+        trendCard.innerHTML = `
+          <h2>${trend.title}</h2>
+          <p>${trend.description}</p>
+          <a href="${trend.link}" target="_blank">Read More</a>
+        `;
+        container.appendChild(trendCard);
+      });
+    }
+
+    // Call the function to render trends when the page loads
+    document.addEventListener('DOMContentLoaded', renderTrends);
+  </script>
+</body>
+</html>

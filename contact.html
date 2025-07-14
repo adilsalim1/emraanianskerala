@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Emraan Hashmi</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Font Awesome for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Contact section specific styles */
+    .contact-section {
+      padding: 2rem;
+      max-width: 1000px; /* Increased max-width for side-by-side layout */
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact-section h1 {
+      color: #ffd700;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+    }
+
+    /* Container for side-by-side content */
+    .contact-layout-container {
+      display: flex;
+      flex-wrap: wrap; /* Allow wrapping on smaller screens */
+      gap: 4rem; /* Increased space between the two columns */
+      justify-content: center;
+      align-items: flex-start; /* Align items to the top */
+    }
+
+    .contact-content,
+    .contact-form-container {
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      padding: 2.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: left;
+      flex: 1; /* Allow items to grow and shrink */
+      min-width: 350px; /* Minimum width before wrapping */
+      box-sizing: border-box; /* Include padding in width calculation */
+    }
+
+    .contact-content h2,
+    .contact-form-container h2 {
+      color: #ffd700; /* Changed to golden for consistency */
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      border-bottom: 2px solid #ffd700;
+      padding-bottom: 0.5rem;
+    }
+
+    .contact-content p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: #f2f2f2;
+    }
+
+    .contact-info-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .contact-info-item i {
+      color: #ffd700;
+      font-size: 1.5rem;
+      margin-right: 1rem;
+      width: 30px; /* Fixed width for icon alignment */
+      text-align: center;
+    }
+
+    .contact-info-item a {
+      color: #f2f2f2;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .contact-info-item a:hover {
+      color: #ffd700;
+      text-decoration: underline;
+    }
+
+    /* Form specific styles */
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      color: #f2f2f2;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
+    .form-group textarea {
+      width: calc(100% - 20px); /* Adjust for padding */
+      padding: 10px;
+      border: 1px solid #333;
+      border-radius: 5px;
+      background-color: #0d0d0d;
+      color: #f2f2f2;
+      font-size: 1rem;
+      box-sizing: border-box; /* Include padding in width */
+    }
+
+    .form-group textarea {
+      resize: vertical; /* Allow vertical resizing */
+      min-height: 100px;
+    }
+
+    .form-group input[type="text"]:focus,
+    .form-group input[type="email"]:focus,
+    .form-group input[type="tel"]:focus,
+    .form-group textarea:focus {
+      border-color: #ffd700;
+      outline: none;
+      box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+    }
+
+    .submit-button {
+      background-color: #ffd700;
+      color: #1a1a1a;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      display: block; /* Make button full width */
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .submit-button:hover {
+      background-color: #f2f2f2;
+      transform: translateY(-2px);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+      .contact-layout-container {
+        flex-direction: column; /* Stack columns on smaller screens */
+        align-items: center; /* Center stacked items */
+      }
+      .contact-content,
+      .contact-form-container {
+        min-width: unset; /* Remove min-width to allow full width */
+        width: 100%; /* Take full width when stacked */
+        max-width: 600px; /* Limit max width for readability */
+      }
+    }
+
+    @media (max-width: 768px) {
+      .contact-section h1 {
+        font-size: 2rem;
+      }
+      .contact-content, .contact-form-container {
+        padding: 1.5rem;
+      }
+      .contact-info-item {
+        font-size: 1rem;
+      }
+      .contact-info-item i {
+        font-size: 1.3rem;
+        margin-right: 0.8rem;
+      }
+      .contact-section {
+        padding: 1rem;
+      }
+      .contact-form-container h2 {
+        font-size: 1.8rem;
+      }
+      .submit-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .contact-section h1 {
+        font-size: 1.75rem;
+      }
+      .contact-content, .contact-form-container {
+        padding: 1rem;
+      }
+      .contact-info-item {
+        font-size: 0.95rem;
+        flex-direction: column; /* Stack icon and text on very small screens */
+        align-items: flex-start;
+      }
+      .contact-info-item i {
+        margin-bottom: 0.5rem;
+      }
+      .contact-form-container h2 {
+        font-size: 1.5rem;
+      }
+      .form-group input, .form-group textarea {
+        width: 100%; /* Full width for inputs */
+      }
+    }
+  </style>
+</head>
+<body>
+  
+<nav>
+  <div class="logo">Emraanians Kerala</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="filmography.html">Filmography</a>
+    <a href="awards.html">Awards</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="trends.html">Trends</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+  <section class="contact-section">
+    <h1>Connect With Us</h1> <!-- Changed main title for clarity -->
+    <p>We'd love to hear from you! Reach out to us through the following channels or send us a message directly.</p>
+    
+    <div class="contact-layout-container">
+      <div class="contact-content">
+        <h2>Contact Us</h2> <!-- Changed title to "Contact Us" -->
+        <div class="contact-info-item">
+          <i class="fas fa-envelope"></i>
+          <span>Email: <a href="mailto:emraanfanskerala@gmail.com">emraanfanskerala@gmail.com</a></span>
+        </div>
+        <div class="contact-info-item">
+          <i class="fab fa-instagram"></i>
+          <span>Instagram: <a href="https://www.instagram.com/ehfckerala?igsh=MWdrcHBydWU0MjVxMA==" target="_blank">@ehfckerala</a></span>
+        </div>
+        <div class="contact-info-item">
+          <i class="fab fa-twitter"></i>
+          <span>Twitter: <a href="https://x.com/ehfckerala" target="_blank">@ehfckerala</a></span>
+        </div>
+        <div class="contact-info-item">
+          <i class="fab fa-facebook-f"></i>
+          <span>Facebook: <a href="https://www.facebook.com/ehfckerala1/" target="_blank">Emraanians Kerala</a></span>
+        </div>
+        <div class="contact-info-item">
+          <i class="fab fa-whatsapp"></i>
+          <span>WhatsApp: <a href="https://wa.me/917994779505" target="_blank">+91 7994779505</a>, <a href="https://wa.me/918590927136" target="_blank">+91 85909 27136</a>, <a href="https://wa.me/919746327716" target="_blank">+91 97463 27716</a></span>
+        </div>
+        <p style="margin-top: 2rem;">For fan art submissions, collaboration inquiries, or any other questions, please feel free to send us an email or reach out on our social media platforms. We look forward to connecting with you!</p>
+      </div>
+
+      <div class="contact-form-container">
+        <h2>Join Our Community</h2> <!-- Changed title to "Join Our Community" -->
+        <form action="#" method="POST"> <!-- action and method can be updated for backend -->
+          <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Your Phone:</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="submit-button">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

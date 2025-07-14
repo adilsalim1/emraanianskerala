@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Filmography - Emraan Hashmi</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Filmography specific styles */
+    .filmography-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .film-card {
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .film-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .film-card img {
+      width: 100%;
+      height: 250px; /* Increased image height */
+      object-fit: cover;
+      border-bottom: 1px solid #222;
+    }
+
+    .film-info {
+      padding: 1.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .film-info h3 {
+      color: #ffd700;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .film-info p {
+      font-size: 0.95rem;
+      color: #ccc;
+      margin-bottom: 0.5rem;
+    }
+
+    .film-info .year {
+      font-weight: bold;
+      color: #f2f2f2;
+    }
+
+    .film-info .genre {
+      font-style: italic;
+      color: #aaa;
+    }
+
+    /* General section styling */
+    section {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    section h1 {
+      color: #ffd700;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 2.5rem;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .filmography-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        padding: 1rem;
+      }
+      .film-card img {
+        height: 220px; /* Adjusted height for smaller screens */
+      }
+      .film-info h3 {
+        font-size: 1.3rem;
+      }
+      section h1 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .filmography-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0.5rem;
+      }
+      .film-card img {
+        height: 180px; /* Adjusted height for very small screens */
+      }
+      .film-info h3 {
+        font-size: 1.2rem;
+      }
+      section h1 {
+        font-size: 1.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+<nav>
+  <div class="logo">Emraanians Kerala</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="filmography.html">Filmography</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="trends.html">Trends</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+  <section>
+    <h1>Emraan Hashmi's Complete Filmography</h1>
+    <p style="text-align: center; margin-bottom: 2rem;">Explore the extensive filmography of Emraan Hashmi, showcasing his diverse roles and cinematic journey from his debut to upcoming projects.</p>
+
+    <div class="filmography-grid">
+      <!-- Films from 2003 -->
+      <div class="film-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/b/be/Foothpath_2003.jpg" alt="Footpath Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Footpath</h3>
+          <p class="year">Year: 2003</p>
+          <p class="genre">Genre: Crime, Drama</p>
+          <p>Role: Raghu Srivastav</p>
+          <p>Notes: Debut film.</p>
+        </div>
+      </div>
+
+      <!-- Films from 2004 -->
+      <div class="film-card">
+        <img src="https://stat4.bollywoodhungama.in/wp-content/uploads/2016/03/Murder-1-306x393.jpg" alt="Murder Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Murder</h3>
+          <p class="year">Year: 2004</p>
+          <p class="genre">Genre: Erotic Thriller</p>
+          <p>Role: Sunny Devaa</p>
+          <p>Notes: Breakthrough role, commercial success.</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9t7tdBLYFMWzokIqHNtH2hGrl0r5qVPeOQg&s" alt="Tumsa Nahin Dekha Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Tumsa Nahin Dekha</h3>
+          <p class="year">Year: 2004</p>
+          <p class="genre">Genre: Romantic Drama</p>
+          <p>Role: Daksh Mittal</p>
+        </div>
+      </div>
+
+      <!-- Films from 2005 -->
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Zeher" alt="Zeher Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Zeher</h3>
+          <p class="year">Year: 2005</p>
+          <p class="genre">Genre: Thriller</p>
+          <p>Role: Siddharth Mehra</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Aashiq+Banaya+Aapne" alt="Aashiq Banaya Aapne Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Aashiq Banaya Aapne</h3>
+          <p class="year">Year: 2005</p>
+          <p class="genre">Genre: Romantic Thriller</p>
+          <p>Role: Vikram "Vicky" Mathur</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Chocolate" alt="Chocolate Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Chocolate</h3>
+          <p class="year">Year: 2005</p>
+          <p class="genre">Genre: Thriller, Suspense</p>
+          <p>Role: Deva</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Kalyug" alt="Kalyug Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Kalyug</h3>
+          <p class="year">Year: 2005</p>
+          <p class="genre">Genre: Drama, Thriller</p>
+          <p>Role: Ali Bilal "Ali Bhai"</p>
+        </div>
+      </div>
+
+      <!-- Films from 2006 -->
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Jawani+Diwani" alt="Jawani Diwani Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Jawani Diwani: A Youthful Joyride</h3>
+          <p class="year">Year: 2006</p>
+          <p class="genre">Genre: Romantic Comedy</p>
+          <p>Role: Mannjit "Mann" Kapoor</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Aksar" alt="Aksar Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Aksar</h3>
+          <p class="year">Year: 2006</p>
+          <p class="genre">Genre: Drama, Thriller</p>
+          <p>Role: Ricky Sharma</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Gangster" alt="Gangster Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Gangster</h3>
+          <p class="year">Year: 2006</p>
+          <p class="genre">Genre: Romantic Crime</p>
+          <p>Role: Akash Kapadia</p>
+          <p>Notes: Nominated Filmfare Award For Best Actor In A Negative Role.</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=The+Killer" alt="The Killer Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>The Killer</h3>
+          <p class="year">Year: 2006</p>
+          <p class="genre">Genre: Thriller</p>
+          <p>Role: Nikhil Joshi</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Dil+Diya+Hai" alt="Dil Diya Hai Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Dil Diya Hai</h3>
+          <p class="year">Year: 2006</p>
+          <p class="genre">Genre: Romantic Thriller</p>
+          <p>Role: Sahil Khanna</p>
+        </div>
+      </div>
+
+      <!-- Films from 2007 -->
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Good+Boy,+Bad+Boy" alt="Good Boy, Bad Boy Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Good Boy, Bad Boy</h3>
+          <p class="year">Year: 2007</p>
+          <p class="genre">Genre: Comedy</p>
+          <p>Role: Rajveer "Raju" Malhotra</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Awarapan" alt="Awarapan Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Awarapan</h3>
+          <p class="year">Year: 2007</p>
+          <p class="genre">Genre: Action, Drama</p>
+          <p>Role: Shivam Pandit</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=The+Train" alt="The Train Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>The Train</h3>
+          <p class="year">Year: 2007</p>
+          <p class="genre">Genre: Thriller</p>
+          <p>Role: Vishal Dixit</p>
+        </div>
+      </div>
+
+      <!-- Films from 2008 -->
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Jannat" alt="Jannat Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Jannat</h3>
+          <p class="year">Year: 2008</p>
+          <p class="genre">Genre: Crime, Romance</p>
+          <p>Role: Arjun Dixit</p>
+        </div>
+      </div>
+
+      <!-- Films from 2009 -->
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Raaz+The+Mystery+Continues" alt="Raaz The Mystery Continues Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Raaz: The Mystery Continues</h3>
+          <p class="year">Year: 2009</p>
+          <p class="genre">Genre: Horror, Thriller</p>
+          <p>Role: Prithvi Singh</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Tum+Mile" alt="Tum Mile Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Tum Mile</h3>
+          <p class="year">Year: 2009</p>
+          <p class="genre">Genre: Romantic Drama</p>
+          <p>Role: Akshay "Akki" Malvade</p>
+        </div>
+      </div>
+
+      <!-- Films from 2010 -->
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Once+Upon+a+Time+in+Mumbaai" alt="Once Upon a Time in Mumbaai Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Once Upon a Time in Mumbaai</h3>
+          <p class="year">Year: 2010</p>
+          <p class="genre">Genre: Action, Crime, Drama</p>
+          <p>Role: Shoaib Khan</p>
+          <p>Notes: Nominated—Filmfare Award For Best Supporting Actor.</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Crook" alt="Crook Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Crook</h3>
+          <p class="year">Year: 2010</p>
+          <p class="genre">Genre: Action, Thriller</p>
+          <p>Role: Jai Dixit & Suraj Bhardwaj</p>
+        </div>
+      </div>
+
+      <!-- Films from 2011 -->
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Dil+Toh+Baccha+Hai+Ji" alt="Dil Toh Baccha Hai Ji Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Dil Toh Baccha Hai Ji</h3>
+          <p class="year">Year: 2011</p>
+          <p class="genre">Genre: Romantic Comedy</p>
+          <p>Role: Abhay Suri</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Murder+2" alt="Murder 2 Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Murder 2</h3>
+          <p class="year">Year: 2011</p>
+          <p class="genre">Genre: Psychological Thriller</p>
+          <p>Role: Arjun Bhagawat</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=The+Dirty+Picture" alt="The Dirty Picture Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>The Dirty Picture</h3>
+          <p class="year">Year: 2011</p>
+          <p class="genre">Genre: Biographical Drama</p>
+          <p>Role: Abraham Film Director</p>
+        </div>
+      </div>
+
+      <!-- Films from 2012 -->
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Jannat+2" alt="Jannat 2 Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Jannat 2</h3>
+          <p class="year">Year: 2012</p>
+          <p class="genre">Genre: Crime, Thriller</p>
+          <p>Role: Sunil Dhariwal / Sonu Dilli "KKC – Kutti Kamini Cheeze"</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Shanghai" alt="Shanghai Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Shanghai</h3>
+          <p class="year">Year: 2012</p>
+          <p class="genre">Genre: Political Thriller</p>
+          <p>Role: Joginder Parmar</p>
+          <p>Notes: Nominated—Filmfare Award For Best Supporting Actor.</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Raaz+3" alt="Raaz 3 Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Raaz 3</h3>
+          <p class="year">Year: 2012</p>
+          <p class="genre">Genre: Horror, Thriller</p>
+          <p>Role: Aditya Arora</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Rush" alt="Rush Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Rush</h3>
+          <p class="year">Year: 2012</p>
+          <p class="genre">Genre: Crime, Thriller</p>
+          <p>Role: Samar Grover</p>
+        </div>
+      </div>
+
+      <!-- Films from 2013 -->
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Ek+Thi+Daayan" alt="Ek Thi Daayan Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Ek Thi Daayan</h3>
+          <p class="year">Year: 2013</p>
+          <p class="genre">Genre: Supernatural Thriller</p>
+          <p>Role: Bejoy Charan Mathur (Bobo)</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Ghanchakkar" alt="Ghanchakkar Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Ghanchakkar</h3>
+          <p class="year">Year: 2013</p>
+          <p class="genre">Genre: Comedy, Crime</p>
+          <p>Role: Sanjay "Sanju" Athray</p>
+        </div>
+      </div>
+
+      <!-- Films from 2014 -->
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Raja+Natwarlal" alt="Raja Natwarlal Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Raja Natwarlal</h3>
+          <p class="year">Year: 2014</p>
+          <p class="genre">Genre: Crime, Thriller</p>
+          <p>Role: Mithilesh Kumar Srivastava / "Raja Natwarlal"</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Ungli" alt="Ungli Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Ungli</h3>
+          <p class="year">Year: 2014</p>
+          <p class="genre">Genre: Action, Crime, Drama</p>
+          <p>Role: Nikhil Abhyankar</p>
+        </div>
+      </div>
+
+      <!-- Films from 2015 -->
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Mr.+X" alt="Mr. X Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Mr. X</h3>
+          <p class="year">Year: 2015</p>
+          <p class="genre">Genre: Sci-Fi, Thriller</p>
+          <p>Role: Raghu Ram Rathore / Mr. X</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Hamari+Adhuri+Kahani" alt="Hamari Adhuri Kahani Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Hamari Adhuri Kahani</h3>
+          <p class="year">Year: 2015</p>
+          <p class="genre">Genre: Romantic Drama</p>
+          <p>Role: Aarav Ruparel</p>
+        </div>
+      </div>
+
+      <!-- Films from 2016 -->
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Azhar" alt="Azhar Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Azhar</h3>
+          <p class="year">Year: 2016</p>
+          <p class="genre">Genre: Biographical Sports Drama</p>
+          <p>Role: Mohammad Azharuddin</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Raaz+Reboot" alt="Raaz Reboot Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Raaz: Reboot</h3>
+          <p class="year">Year: 2016</p>
+          <p class="genre">Genre: Horror, Thriller</p>
+          <p>Role: Aditya Srivastava / (Evil Spirit Ghost)</p>
+        </div>
+      </div>
+
+      <!-- Films from 2017 -->
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Baadshaho" alt="Baadshaho Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Baadshaho</h3>
+          <p class="year">Year: 2017</p>
+          <p class="genre">Genre: Action, Thriller</p>
+          <p>Role: Dalia</p>
+        </div>
+      </div>
+
+      <!-- Films from 2018 -->
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Welcome+to+New+York" alt="Welcome to New York Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Welcome to New York</h3>
+          <p class="year">Year: 2018</p>
+          <p class="genre">Genre: Comedy</p>
+          <p>Role: Himself</p>
+          <p>Notes: Guest appearance.</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Tigers" alt="Tigers Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Tigers</h3>
+          <p class="year">Year: 2018</p>
+          <p class="genre">Genre: Drama, Thriller</p>
+          <p>Role: Ayaan</p>
+          <p>Notes: Released on ZEE5.</p>
+        </div>
+      </div>
+
+      <!-- Films from 2019 -->
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Why+Cheat+India" alt="Why Cheat India Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Why Cheat India</h3>
+          <p class="year">Year: 2019</p>
+          <p class="genre">Genre: Crime, Drama</p>
+          <p>Role: Rakesh Kumar Singh (Rocky)</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=The+Body" alt="The Body Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>The Body</h3>
+          <p class="year">Year: 2019</p>
+          <p class="genre">Genre: Mystery, Thriller</p>
+          <p>Role: Ajay Puri</p>
+        </div>
+      </div>
+
+      <!-- Films from 2020 -->
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Harami" alt="Harami Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Harami</h3>
+          <p class="year">Year: 2020</p>
+          <p class="genre">Genre: Drama</p>
+          <p>Role: Sagar Bhai</p>
+        </div>
+      </div>
+
+      <!-- Films from 2021 -->
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Mumbai+Saga" alt="Mumbai Saga Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Mumbai Saga</h3>
+          <p class="year">Year: 2021</p>
+          <p class="genre">Genre: Action, Crime</p>
+          <p>Role: Vijay Savarkar</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Chehre" alt="Chehre Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Chehre</h3>
+          <p class="year">Year: 2021</p>
+          <p class="genre">Genre: Mystery, Thriller</p>
+          <p>Role: Sameer Mehra</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Dybbuk" alt="Dybbuk Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Dybbuk</h3>
+          <p class="year">Year: 2021</p>
+          <p class="genre">Genre: Horror</p>
+          <p>Role: Sam Isaac</p>
+          <p>Notes: Released on Amazon Prime Video.</p>
+        </div>
+      </div>
+
+      <!-- Films from 2023 -->
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Selfiee" alt="Selfiee Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Selfiee</h3>
+          <p class="year">Year: 2023</p>
+          <p class="genre">Genre: Comedy, Drama</p>
+          <p>Role: RTO Inspector Om Prakash Agarwal</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Tiger+3" alt="Tiger 3 Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Tiger 3</h3>
+          <p class="year">Year: 2023</p>
+          <p class="genre">Genre: Action, Thriller</p>
+          <p>Role: ISI Agent Aatish Rehman</p>
+          <p>Notes: Nominated Filmfare Award for Best Supporting Actor.</p>
+        </div>
+      </div>
+
+      <!-- Films from 2024 -->
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Ae+Watan+Mere+Watan" alt="Ae Watan Mere Watan Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Ae Watan Mere Watan</h3>
+          <p class="year">Year: 2024</p>
+          <p class="genre">Genre: Historical Drama</p>
+          <p>Role: Ram Manohar Lohia</p>
+          <p>Notes: Cameo appearance.</p>
+        </div>
+      </div>
+
+      <!-- Upcoming Films (2025 onwards) -->
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Ground+Zero" alt="Ground Zero Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Ground Zero</h3>
+          <p class="year">Year: 2025</p>
+          <p class="genre">Genre: Action, Historical, Thriller</p>
+          <p>Role: BSF Deputy Commandant Narendra Nath Dube</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=OG" alt="OG Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>OG</h3>
+          <p class="year">Year: 2025</p>
+          <p class="genre">Genre: Action, Thriller (Telugu)</p>
+          <p>Role: Omi Bhau</p>
+          <p>Notes: Post-production; Telugu film.</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=G2" alt="G2 Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>G2</h3>
+          <p class="year">Year: 2026</p>
+          <p class="genre">Genre: Action, Thriller (Telugu)</p>
+          <p>Role: Michael / Prince Vithal</p>
+          <p>Notes: Filming.</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Awarapan+2" alt="Awarapan 2 Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Awarapan 2</h3>
+          <p class="year">Year: 2026</p>
+          <p class="genre">Genre: Action, Romantic</p>
+          <p>Role: Shivam Pandit</p>
+          <p>Notes: Filming.</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Gunmaaster+G9" alt="Gunmaaster G9 Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Gunmaaster G9</h3>
+          <p class="year">Year: 2026</p>
+          <p class="genre">Genre: Action, Drama, Thriller</p>
+          <p>Notes: Under Production.</p>
+        </div>
+      </div>
+      <div class="film-card">
+        <img src="https://placehold.co/400x250/000000/FFFFFF?text=Untitled+Film" alt="Untitled Film Poster" onerror="this.onerror=null;this.src='https://placehold.co/400x250/000000/FFFFFF?text=Image+Not+Found';">
+        <div class="film-info">
+          <h3>Untitled film</h3>
+          <p class="year">Year: 2025</p>
+          <p class="genre">Genre: Unknown</p>
+          <p>Role: Mohd. Ahmed Khan</p>
+          <p>Notes: Completed.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>
